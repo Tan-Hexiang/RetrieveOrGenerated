@@ -9,3 +9,5 @@
 
 # save 
 !source/prompt.jsonl
+# save all dir
+!*/
