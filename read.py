@@ -52,7 +52,7 @@ if __name__ == "__main__":
     
     # used to find the prompt template
     parser.add_argument("--dataset", default=None, type=str, required=True,
-        help="dataset name: [nq, tqa, webq, wizard, fever, fm2]",
+        help="dataset name: [nq, tqa]",
     )
     parser.add_argument("--pid", default=1, type=int)
     # retrieved passage
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     parser.add_argument("--device_map", type=str, default='sequential')
     parser.add_argument("--logprobs", action='store_true')
     parser.add_argument("--subdir", type=str, default='default')
-    parser.add_argument("--subset_name", type=str, default='none') # 默认取{dataset}-test
+    parser.add_argument("--subset_name", type=str, default='none')
     parser.add_argument("--truncation_generated_with_token_length", type=int, default = 0)
     args = parser.parse_args()
     if args.dataset in ['nq', 'webq', 'tqa', 'twiki']:
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     
     # output path
     if args.subset_name == 'none':
-        outputfolder = f'Answer-with-{args.engine}/{args.dataset}-test'
+        outputfolder = f'Answer-with-{args.engine}/{args.dataset}'
     else:
         outputfolder = f'Answer-with-{args.engine}/{args.subset_name}'
     if args.subdir == 'default':

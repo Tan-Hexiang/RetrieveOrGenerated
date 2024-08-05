@@ -172,16 +172,12 @@ class context_conflicting_dataset:
             else:
                 setattr(self, name, data)
             
-    def get_generation_ratio(self, mode='sub'):
-        if mode == 'sub':
-            generation_ratio ={
-                'data_aig':(self.preference['data_aig']['Gen-Ans']-self.preference['data_aig']['IR-Ans']) / (self.preference['data_aig']['Gen-Ans']+self.preference['data_aig']['IR-Ans']),
-                
-                'data_air':(self.preference['data_air']['Gen-Ans'] - self.preference['data_air']['IR-Ans'] )/ (self.preference['data_air']['Gen-Ans']+self.preference['data_air']['IR-Ans'])
-            }
-        else:
-            print("Error mode, must be 'div' or 'sub'")
-            exit()
+    def get_diffgr(self):
+        generation_ratio ={
+            'data_aig':(self.preference['data_aig']['Gen-Ans']-self.preference['data_aig']['IR-Ans']) / (self.preference['data_aig']['Gen-Ans']+self.preference['data_aig']['IR-Ans']),
+            
+            'data_air':(self.preference['data_air']['Gen-Ans'] - self.preference['data_air']['IR-Ans'] )/ (self.preference['data_air']['Gen-Ans']+self.preference['data_air']['IR-Ans'])
+        }
         return generation_ratio
         
     
@@ -280,9 +276,10 @@ class context_conflicting_dataset:
         except:
             print("path error! paths = {}".format(self.path[3]))
         
-        print("len gen: {} ir: {} com: {}".format(len(self.data_gen), len(self.data_ir), len(self.data_com)))
+        print("len gen: {} ir: {} com: {} llm: {}".format(len(self.data_gen), len(self.data_ir), len(self.data_com), len(self.data_llm)))
         assert len(self.data_gen) == len(self.data_com)
         assert len(self.data_ir) == len(self.data_gen)
+        assert len(self.data_ir) == len(self.data_llm)
 
     def _merge_data(self):
 
