@@ -1,0 +1,11 @@
+# Ignore JSON, JSONL, and log files
+*.json
+*.jsonl
+*.log
+*.ipynb
+*.csv
+*.chk
+*.pth
+
+# save 
+!source/prompt.jsonl
