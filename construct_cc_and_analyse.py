@@ -3,7 +3,7 @@ from src.combine import context_conflicting_dataset
 reader = "13b-chat"
 generator = "13b-chat"
 # nq tqa
-dataset = "tqa"
+dataset = "nq"
 
 # -----------------------------------------------------------------------------------------------
 def full_name(name):
