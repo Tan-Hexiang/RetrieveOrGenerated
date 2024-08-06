@@ -5,7 +5,7 @@ This is the code repository for the ACL2024 paper "Blinded by Generated Contexts
 - Environment:
 `pip install -r requirements.txt`
 - Download prepared context and intermediate results to the project directory.
-[link]()
+[link](https://drive.google.com/drive/folders/1Kisw8LXoa12kLm9XyT_1u4TJ64DgJfBR?usp=sharing)
 - Build the CC dataset and calculate DiffGR.
 `python construct_cc_and_analyse.py`
 

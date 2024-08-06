@@ -6,6 +6,7 @@
 *.csv
 *.chk
 *.pth
+upload.sh
 
 # save 
 !source/prompt.jsonl
