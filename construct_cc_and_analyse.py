@@ -1,5 +1,6 @@
 from src.combine import context_conflicting_dataset
 # 7b-chat 13b-chat gpt-3.5-turbo-0613
+# gpt-4-0613
 reader = "13b-chat"
 generator = "13b-chat"
 # nq tqa
