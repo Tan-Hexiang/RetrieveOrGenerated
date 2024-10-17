@@ -4,6 +4,7 @@ This is the code repository for the ACL2024 paper "Blinded by Generated Contexts
 ## Quickly get the **C**ontext-**C**onflicting datasets (**CC**) and analysis result.
 - Environment:
 `pip install -r requirements.txt`
+Also need to clone llama-2 official inference code `git clone  -b  llama_v2 https://github.com/meta-llama/llama.git` into the project path.
 - Download prepared context and intermediate results to the project directory.
 [link](https://drive.google.com/drive/folders/1Kisw8LXoa12kLm9XyT_1u4TJ64DgJfBR?usp=sharing)
 - Build the CC dataset and calculate DiffGR.
